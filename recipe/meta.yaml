@@ -1,4 +1,4 @@
-{% set version = '0.9.10' %}
+{% set version = "0.9.11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 {% set cran_mirror = 'https://cran.r-project.org' %}
@@ -12,7 +12,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/batchtools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/batchtools/batchtools_{{ version }}.tar.gz
-  sha256: c260c3c19e7a27a55e7e8f55fb06f873c75cf06cf13246cbd0469f2fd053f261
+  sha256: 1b64166c944ed7693abe1496421b8cdb338097b9c338a98e76654b767d10b20a
 
 build:
   merge_build_host: True  # [win]
