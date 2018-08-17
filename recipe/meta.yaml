@@ -1,7 +1,6 @@
-{% set version = "0.9.11" %}
+{% set version = '0.9.11' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
-{% set cran_mirror = 'https://cran.r-project.org' %}
 
 package:
   name: r-batchtools
@@ -17,7 +16,7 @@ source:
 build:
   merge_build_host: True  # [win]
   number: 0
-  skip: true  # [win]
+  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,8 +27,9 @@ requirements:
     - {{native}}toolchain        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
-    - {{posix}}sed  # [win]
-    - {{posix}}coreutils  # [win]
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-r6
@@ -70,11 +70,14 @@ about:
   license: LGPL-3
   summary: As a successor of the packages 'BatchJobs' and 'BatchExperiments', this package provides
     a parallel implementation of the Map function for high performance computing systems
-    managed by schedulers 'IBM Spectrum LSF', 'OpenLava', 'Univa Grid Engine', 'Oracle Grid Engine',
-    'Slurm', 'TORQUE/PBS',or 'Docker Swarm'. A multicore and socket mode allow the parallelization
-    on a local machines, and multiple machines can be hooked up via SSH to create a makeshift
-    cluster. Moreover, the package provides an abstraction mechanism to define large-scale
-    computer experiments in a well-organized and reproducible way. 
+    managed by schedulers 'IBM Spectrum LSF' (<https://www.ibm.com/us-en/marketplace/hpc-workload-management>),
+    'OpenLava' (<http://www.openlava.org/>), 'Univa Grid Engine'/'Oracle Grid Engine'
+    (<http://www.univa.com/>), 'Slurm' (<http://slurm.schedmd.com/>), 'TORQUE/PBS' (<http://www.adaptivecomputing.com/products/open-source/torque/>),
+    or 'Docker Swarm' (<https://docs.docker.com/swarm/>). A multicore and socket mode
+    allow the parallelization on a local machines, and multiple machines can be hooked
+    up via SSH to create a makeshift cluster. Moreover, the package provides an abstraction
+    mechanism to define large-scale computer experiments in a well-organized and reproducible
+    way.
   license_family: LGPL
 
 extra:
