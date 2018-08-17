@@ -7,7 +7,7 @@ Package license: LGPL-3
 
 Feedstock license: BSD 3-Clause
 
-Summary: As a successor of the packages 'BatchJobs' and 'BatchExperiments', this package provides a parallel implementation of the Map function for high performance computing systems managed by schedulers 'IBM Spectrum LSF', 'OpenLava', 'Univa Grid Engine', 'Oracle Grid Engine', 'Slurm', 'TORQUE/PBS',or 'Docker Swarm'. A multicore and socket mode allow the parallelization on a local machines, and multiple machines can be hooked up via SSH to create a makeshift cluster. Moreover, the package provides an abstraction mechanism to define large-scale computer experiments in a well-organized and reproducible way.
+Summary: As a successor of the packages 'BatchJobs' and 'BatchExperiments', this package provides a parallel implementation of the Map function for high performance computing systems managed by schedulers 'IBM Spectrum LSF' (<https://www.ibm.com/us-en/marketplace/hpc-workload-management>), 'OpenLava' (<http://www.openlava.org/>), 'Univa Grid Engine'/'Oracle Grid Engine' (<http://www.univa.com/>), 'Slurm' (<http://slurm.schedmd.com/>), 'TORQUE/PBS' (<http://www.adaptivecomputing.com/products/open-source/torque/>), or 'Docker Swarm' (<https://docs.docker.com/swarm/>). A multicore and socket mode allow the parallelization on a local machines, and multiple machines can be hooked up via SSH to create a makeshift cluster. Moreover, the package provides an abstraction mechanism to define large-scale computer experiments in a well-organized and reproducible way.
 
 
 
@@ -16,7 +16,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-batchtools-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-batchtools-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/r-batchtools-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-batchtools-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-batchtools-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-batchtools-feedstock/branch/master)
 
 Current release info
 ====================
