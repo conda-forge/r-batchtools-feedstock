@@ -1,4 +1,4 @@
-{% set version = '0.9.11' %}
+{% set version = "0.9.12" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/batchtools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/batchtools/batchtools_{{ version }}.tar.gz
-  sha256: 1b64166c944ed7693abe1496421b8cdb338097b9c338a98e76654b767d10b20a
+  sha256: c99d4b965a4b6b5394ea1bf8e196d4ef6fd663452c4447f2b9a825bf2111a59b
 
 build:
   merge_build_host: True  # [win]
-  number: 1002
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
