@@ -1,4 +1,4 @@
-{% set version = '0.9.12' %}
+{% set version = "0.9.13" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/batchtools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/batchtools/batchtools_{{ version }}.tar.gz
-  sha256: c99d4b965a4b6b5394ea1bf8e196d4ef6fd663452c4447f2b9a825bf2111a59b
+  sha256: dafa5055dd568ef0f3adcb631019c85506f3e256f2a48486a1b6d8c76d747c09
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -66,19 +66,15 @@ test:
 about:
   home: https://github.com/mllg/batchtools
   license: LGPL-3
-  summary: As a successor of the packages 'BatchJobs' and 'BatchExperiments', this package provides
-    a parallel implementation of the Map function for high performance computing systems
-    managed by schedulers 'IBM Spectrum LSF' (<https://www.ibm.com/us-en/marketplace/hpc-workload-management>),
-    'OpenLava' (<http://www.openlava.org/>), 'Univa Grid Engine'/'Oracle Grid Engine'
-    (<http://www.univa.com/>), 'Slurm' (<http://slurm.schedmd.com/>), 'TORQUE/PBS' (<https://adaptivecomputing.com/cherry-services/torque-resource-manager/>),
-    or 'Docker Swarm' (<https://docs.docker.com/swarm/>). A multicore and socket mode
-    allow the parallelization on a local machines, and multiple machines can be hooked
-    up via SSH to create a makeshift cluster. Moreover, the package provides an abstraction
-    mechanism to define large-scale computer experiments in a well-organized and reproducible
-    way.
+  summary: As a successor of the packages 'BatchJobs' and 'BatchExperiments', this package provides a parallel implementation of the Map function for high performance
+    computing systems managed by schedulers 'IBM Spectrum LSF' (<https://www.ibm.com/us-en/marketplace/hpc-workload-management>), 'OpenLava' (<http://www.openlava.org/>),
+    'Univa Grid Engine'/'Oracle Grid Engine' (<http://www.univa.com/>), 'Slurm' (<http://slurm.schedmd.com/>), 'TORQUE/PBS' (<https://adaptivecomputing.com/cherry-services/torque-resource-manager/>),
+    or 'Docker Swarm' (<https://docs.docker.com/swarm/>). A multicore and socket mode allow the parallelization on a local machines, and multiple machines can be
+    hooked up via SSH to create a makeshift cluster. Moreover, the package provides an abstraction mechanism to define large-scale computer experiments in a well-organized
+    and reproducible way.
   license_family: LGPL
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-3
 
 extra:
   recipe-maintainers:
