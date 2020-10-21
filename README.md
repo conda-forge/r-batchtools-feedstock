@@ -3,7 +3,7 @@ About r-batchtools
 
 Home: https://github.com/mllg/batchtools
 
-Package license: LGPL-3
+Package license: LGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-batchtools-feedstock/blob/master/LICENSE.txt)
 
