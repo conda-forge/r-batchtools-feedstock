@@ -1,4 +1,4 @@
-{% set version = "0.9.17" %}
+{% set version = "0.9.18" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/batchtools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/batchtools/batchtools_{{ version }}.tar.gz
-  sha256: b6e1dd54e8b70c2bf38d2ad1884f6b60fc74c1100f910f46724aa723c0749be6
+  sha256: 47ffd7be8f4e06d89207f58aa7fdf49343e2af5578b539447ca2338fc0e7f0cf
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
